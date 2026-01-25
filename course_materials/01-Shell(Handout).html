@@ -2219,7 +2219,7 @@ vertical-align: -.125em;
   <ul class="collapse">
   <li><a href="#create-and-delete" id="toc-create-and-delete" class="nav-link" data-scroll-target="#create-and-delete">Create and Delete</a></li>
   <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link" data-scroll-target="#exercise-1">Exercise</a></li>
-  <li><a href="#renaming-and-moving-files" id="toc-renaming-and-moving-files" class="nav-link" data-scroll-target="#renaming-and-moving-files">Renaming and Moving Files</a></li>
+  <li><a href="#renaming-and-moving-filesfolder" id="toc-renaming-and-moving-filesfolder" class="nav-link" data-scroll-target="#renaming-and-moving-filesfolder">Renaming and Moving Files/Folder</a></li>
   <li><a href="#exercise-2" id="toc-exercise-2" class="nav-link" data-scroll-target="#exercise-2">Exercise</a></li>
   </ul></li>
   <li><a href="#using-echo-and-pipes" id="toc-using-echo-and-pipes" class="nav-link" data-scroll-target="#using-echo-and-pipes">Using <code>echo</code> and Pipes</a>
@@ -2233,9 +2233,9 @@ vertical-align: -.125em;
   <li><a href="#shell-text-editors" id="toc-shell-text-editors" class="nav-link" data-scroll-target="#shell-text-editors">Shell Text Editors</a></li>
   <li><a href="#using-nano" id="toc-using-nano" class="nav-link" data-scroll-target="#using-nano">Using <code>nano</code></a></li>
   <li><a href="#using-vim" id="toc-using-vim" class="nav-link" data-scroll-target="#using-vim">Using <code>vim</code></a></li>
+  <li><a href="#resources-for-vim" id="toc-resources-for-vim" class="nav-link" data-scroll-target="#resources-for-vim">Resources for vim</a></li>
   <li><a href="#alias" id="toc-alias" class="nav-link" data-scroll-target="#alias">alias</a></li>
   <li><a href="#exercise-4" id="toc-exercise-4" class="nav-link" data-scroll-target="#exercise-4">Exercise</a></li>
-  <li><a href="#resources-for-vim" id="toc-resources-for-vim" class="nav-link" data-scroll-target="#resources-for-vim">Resources for vim</a></li>
   </ul></li>
   <li><a href="#web-api-tools-for-data-retrieval" id="toc-web-api-tools-for-data-retrieval" class="nav-link" data-scroll-target="#web-api-tools-for-data-retrieval">Web API Tools for Data Retrieval</a>
   <ul class="collapse">
@@ -2256,11 +2256,12 @@ vertical-align: -.125em;
   <li><a href="#exercise-6" id="toc-exercise-6" class="nav-link" data-scroll-target="#exercise-6">Exercise</a></li>
   <li><a href="#changing-permissions" id="toc-changing-permissions" class="nav-link" data-scroll-target="#changing-permissions">Changing Permissions</a></li>
   <li><a href="#exercise-7" id="toc-exercise-7" class="nav-link" data-scroll-target="#exercise-7">Exercise</a></li>
+  <li><a href="#permissions-change-with-symbols" id="toc-permissions-change-with-symbols" class="nav-link" data-scroll-target="#permissions-change-with-symbols">Permissions Change with Symbols</a></li>
   </ul></li>
   <li><a href="#writing-and-running-script-files" id="toc-writing-and-running-script-files" class="nav-link" data-scroll-target="#writing-and-running-script-files">Writing and Running Script Files</a>
   <ul class="collapse">
-  <li><a href="#how-to-write-a-script-file" id="toc-how-to-write-a-script-file" class="nav-link" data-scroll-target="#how-to-write-a-script-file">How to Write a Script File</a></li>
-  <li><a href="#how-to-run-a-script-file" id="toc-how-to-run-a-script-file" class="nav-link" data-scroll-target="#how-to-run-a-script-file">How to Run a Script File</a></li>
+  <li><a href="#write-a-script-file" id="toc-write-a-script-file" class="nav-link" data-scroll-target="#write-a-script-file">Write a Script File</a></li>
+  <li><a href="#run-a-script-file" id="toc-run-a-script-file" class="nav-link" data-scroll-target="#run-a-script-file">Run a Script File</a></li>
   <li><a href="#exercise-writing-and-running-scripts" id="toc-exercise-writing-and-running-scripts" class="nav-link" data-scroll-target="#exercise-writing-and-running-scripts">Exercise: Writing and Running Scripts</a></li>
   </ul></li>
   <li><a href="#working-with-processes" id="toc-working-with-processes" class="nav-link" data-scroll-target="#working-with-processes">Working with Processes</a>
@@ -2433,16 +2434,18 @@ vertical-align: -.125em;
 <li><p>Remove the temporary directory properly.</p></li>
 </ol>
 </section>
-<section id="renaming-and-moving-files" class="level2">
-<h2 class="anchored" data-anchor-id="renaming-and-moving-files">Renaming and Moving Files</h2>
+<section id="renaming-and-moving-filesfolder" class="level2">
+<h2 class="anchored" data-anchor-id="renaming-and-moving-filesfolder">Renaming and Moving Files/Folder</h2>
 <ul>
-<li><strong>Rename a file</strong>:</li>
+<li><strong>Rename a folder/file</strong>:</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">mv</span> old_name.txt new_name.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">mv</span> old_name.txt new_name.txt</span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="fu">mv</span> old_directory_name new_directory_name</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
-<li><strong>Move a file</strong>:</li>
+<li><strong>Move a folder/file</strong>:</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">mv</span> file.txt /new/path/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">mv</span> file.txt /new/path/</span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="fu">mv</span> folder /new/path/</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="exercise-2" class="level2">
 <h2 class="anchored" data-anchor-id="exercise-2">Exercise</h2>
@@ -2503,11 +2506,11 @@ vertical-align: -.125em;
 <ul>
 <li>Commands shown at bottom of screen</li>
 </ul></li>
-<li><p><strong><code>vim</code></strong>: For Pros, Nerds … like me</p>
+<li><p><strong><code>vim</code></strong>: For extreme productivity</p>
 <ul>
 <li>If you want to <strong>flex</strong> your skills, go for it</li>
 <li>Make your coding extremely efficient</li>
-<li>Modal editor (insert mode vs. command mode)</li>
+<li>Modal editor (insert/command/visual mode)</li>
 </ul></li>
 </ul>
 </section>
@@ -2558,6 +2561,21 @@ vertical-align: -.125em;
 </ul></li>
 </ul>
 </section>
+<section id="resources-for-vim" class="level2">
+<h2 class="anchored" data-anchor-id="resources-for-vim">Resources for vim</h2>
+<p>For those who are devoted…</p>
+<ol type="1">
+<li><p><code>vimtutor</code>: teaches you how to use vim in the command line.</p></li>
+<li><p><code>vimHero</code>: Great interactive tutorial for vim</p>
+<ul>
+<li>https://www.vim-hero.com</li>
+</ul></li>
+<li><p><code>vim Adventure</code>: Game that teaches you how to use <code>vim</code>.</p>
+<ul>
+<li>https://vim-adventures.com</li>
+</ul></li>
+</ol>
+</section>
 <section id="alias" class="level2">
 <h2 class="anchored" data-anchor-id="alias">alias</h2>
 <p>You can create <code>alias</code> that can be used easily. For example, if I wanted to alias my class folder:</p>
@@ -2574,21 +2592,6 @@ vertical-align: -.125em;
 <li><p>(Homework) Generate alias for your class directory. Write text file with exact file location and name:</p>
 <ul>
 <li><code>~/.bashrc</code> (windows) or <code>~/.zshrc</code> (mac).</li>
-</ul></li>
-</ol>
-</section>
-<section id="resources-for-vim" class="level2">
-<h2 class="anchored" data-anchor-id="resources-for-vim">Resources for vim</h2>
-<p>For those who are devoted…</p>
-<ol type="1">
-<li><p><code>vimtutor</code>: teaches you how to use vim in the command line.</p></li>
-<li><p><code>vimHero</code>: Great interactive tutorial for vim</p>
-<ul>
-<li>https://www.vim-hero.com</li>
-</ul></li>
-<li><p><code>vim Adventure</code>: Game that teaches you how to use <code>vim</code>.</p>
-<ul>
-<li>https://vim-adventures.com</li>
 </ul></li>
 </ol>
 </section>
@@ -2779,50 +2782,82 @@ lrwxrwxrwx  1 user group     20 Jan 25 10:45 link -&gt; /path/to/target</code></
 <li>Interpret <code>chmod 600 file.txt</code>.</li>
 </ol>
 </section>
+<section id="permissions-change-with-symbols" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="permissions-change-with-symbols">Permissions Change with Symbols</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1"></a><span class="fu">chmod</span> u+x file.txt      <span class="co"># Add execute permission for user</span></span>
+<span id="cb26-2"><a href="#cb26-2"></a><span class="fu">chmod</span> g-w file.txt      <span class="co"># Remove write permission for group</span></span>
+<span id="cb26-3"><a href="#cb26-3"></a><span class="fu">chmod</span> o=r file.txt      <span class="co"># Set others permission to read-only</span></span>
+<span id="cb26-4"><a href="#cb26-4"></a><span class="fu">chmod</span> a+r file.txt      <span class="co"># Add read permission for everyone</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li><strong>Symbolic Mode</strong>: <code>chmod [who][operator][permission] filename</code>
+<ul>
+<li><strong>Who</strong>:
+<ul>
+<li><code>u</code>: User (owner)</li>
+<li><code>g</code>: Group</li>
+<li><code>o</code>: Others</li>
+<li><code>a</code>: All (u, g, and o)</li>
+</ul></li>
+<li><strong>Operator</strong>:
+<ul>
+<li><code>+</code>: Add permission</li>
+<li><code>-</code>: Remove permission</li>
+<li><code>=</code>: Set permission</li>
+</ul></li>
+<li><strong>Permission</strong>:
+<ul>
+<li><code>r</code>: Read</li>
+<li><code>w</code>: Write</li>
+<li><code>x</code>: Execute</li>
+</ul></li>
+</ul></li>
+</ul>
+</section>
 </section>
 <section id="writing-and-running-script-files" class="level1">
 <h1>Writing and Running Script Files</h1>
-<section id="how-to-write-a-script-file" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-write-a-script-file">How to Write a Script File</h2>
+<section id="write-a-script-file" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="write-a-script-file">Write a Script File</h2>
 <ol type="1">
-<li><strong>Create a Script File</strong>:
+<li><p><strong>Create a Script File</strong>:</p>
 <ul>
 <li><p>Use a text editor like <code>nano</code> or <code>vim</code> to create a script file:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb26"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1"></a><span class="fu">nano</span> myscript.sh</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1"></a><span class="fu">nano</span> myscript.sh</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 </ul></li>
-<li><strong>Add Commands to the Script</strong>:
+<li><p><strong>Add Commands to the Script</strong>:</p>
 <ul>
-<li><p>Begin with a <strong>shebang</strong> to specify the shell interpreter:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb27"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1"></a><span class="co">#!/bin/bash</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>Begin with a <strong>#!</strong> to specify the shell interpreter (bash):</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1"></a><span class="co">#!/bin/bash</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p>Add commands to the script:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1"></a><span class="bu">echo</span> <span class="st">&quot;Hello, Shell!&quot;</span></span>
-<span id="cb28-2"><a href="#cb28-2"></a><span class="bu">echo</span> <span class="st">&quot;My current shell is </span><span class="va">$SHELL</span><span class="st">&quot;</span></span>
-<span id="cb28-3"><a href="#cb28-3"></a><span class="fu">date</span></span>
-<span id="cb28-4"><a href="#cb28-4"></a><span class="bu">pwd</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1"></a><span class="bu">echo</span> <span class="st">&quot;Hello, Shell!&quot;</span></span>
+<span id="cb29-2"><a href="#cb29-2"></a><span class="bu">echo</span> <span class="st">&quot;My current shell is </span><span class="va">$SHELL</span><span class="st">&quot;</span></span>
+<span id="cb29-3"><a href="#cb29-3"></a><span class="fu">date</span></span>
+<span id="cb29-4"><a href="#cb29-4"></a><span class="bu">pwd</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 </ul></li>
-<li><strong>Save the File</strong>:
+<li><p><strong>Save the File</strong>:</p>
 <ul>
 <li>Save and exit the editor (<code>Ctrl + O</code> and <code>Ctrl + X</code> in <code>nano</code>).</li>
 </ul></li>
 </ol>
 </section>
-<section id="how-to-run-a-script-file" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-run-a-script-file">How to Run a Script File</h2>
+<section id="run-a-script-file" class="level2 smaller">
+<h2 class="smaller anchored" data-anchor-id="run-a-script-file">Run a Script File</h2>
 <ol type="1">
 <li><strong>Make the Script Executable</strong>:
 <ul>
 <li><p>Grant execute permissions to the script using <code>chmod</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1"></a><span class="fu">chmod</span> 755 myscript.sh</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1"></a><span class="fu">chmod</span> 755 myscript.sh</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 </ul></li>
 <li><strong>Run the Script</strong>:
 <ul>
 <li><p>Execute the script by specifying its path:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb30"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1"></a><span class="ex">./myscript.sh</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb31-1"><a href="#cb31-1"></a><span class="co"># You must provide ./ if myscript.sh is in current folder.</span></span>
+<span id="cb31-2"><a href="#cb31-2"></a><span class="ex">./myscript.sh</span> </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 </ul></li>
 <li><strong>Alternative Method</strong>:
 <ul>
 <li><p>Run the script without changing permissions by invoking the shell directly:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb31"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb31-1"><a href="#cb31-1"></a><span class="fu">bash</span> myscript.sh</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1"></a><span class="fu">bash</span> myscript.sh</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 </ul></li>
 </ol>
 </section>
@@ -2834,8 +2869,9 @@ lrwxrwxrwx  1 user group     20 Jan 25 10:45 link -&gt; /path/to/target</code></
 <li>Prints “Welcome to Shell scripting.”.</li>
 <li>Displays the current date and time.</li>
 </ul></li>
-<li><p>Add execute permissions.</p></li>
-<li><p>Run the script.</p></li>
+<li><p>Add execute permissions to user, group and others.</p></li>
+<li><p>Check and confirm the file permission with <code>ls -l</code>.</p></li>
+<li><p>Run the script <code>greet.sh</code> with proper command.</p></li>
 </ol>
 </section>
 </section>
@@ -2846,26 +2882,26 @@ lrwxrwxrwx  1 user group     20 Jan 25 10:45 link -&gt; /path/to/target</code></
 <ul>
 <li><strong>List running processes</strong>:</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb32"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1"></a><span class="fu">ps</span></span>
-<span id="cb32-2"><a href="#cb32-2"></a><span class="fu">ps</span> u  <span class="co"># only current user </span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1"></a><span class="fu">ps</span></span>
+<span id="cb33-2"><a href="#cb33-2"></a><span class="fu">ps</span> u  <span class="co"># User friendly format</span></span>
+<span id="cb33-3"><a href="#cb33-3"></a><span class="fu">ps</span> aux <span class="co"># Include all running process</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
-<li><strong>Interactive process viewer</strong>:</li>
+<li><strong>Dynamic process viewer</strong>:</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb33"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1"></a><span class="co"># q to quit</span></span>
-<span id="cb33-2"><a href="#cb33-2"></a><span class="ex">top</span></span>
-<span id="cb33-3"><a href="#cb33-3"></a><span class="ex">htop</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1"></a><span class="co"># q to quit</span></span>
+<span id="cb34-2"><a href="#cb34-2"></a><span class="ex">top</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="managing-processes" class="level2">
 <h2 class="anchored" data-anchor-id="managing-processes">Managing Processes</h2>
 <ul>
 <li><strong>Kill a process</strong>:</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb34"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1"></a><span class="bu">kill</span> PID</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1"></a><span class="bu">kill</span> PID</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li><strong>Background and foreground processes</strong>:</li>
 </ul>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb35"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb35-1"><a href="#cb35-1"></a><span class="bu">command</span> <span class="kw">&amp;</span>  <span class="co"># Run in background, PID is printed</span></span>
-<span id="cb35-2"><a href="#cb35-2"></a><span class="bu">fg</span>  <span class="co"># Bring to foreground</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1"></a><span class="bu">command</span> <span class="kw">&amp;</span>  <span class="co"># Run in background, PID is printed</span></span>
+<span id="cb36-2"><a href="#cb36-2"></a><span class="bu">fg</span>  <span class="co"># Bring to foreground</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="exercise-8" class="level2">
 <h2 class="anchored" data-anchor-id="exercise-8">Exercise</h2>
@@ -2883,17 +2919,17 @@ lrwxrwxrwx  1 user group     20 Jan 25 10:45 link -&gt; /path/to/target</code></
 <h2 class="anchored" data-anchor-id="history-and-shortcuts">History and Shortcuts</h2>
 <ul>
 <li><p><strong>View command history</strong>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb36"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1"></a><span class="bu">history</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb37-1"><a href="#cb37-1"></a><span class="bu">history</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li>Displays a list of previously executed commands.</li>
 </ul></li>
 <li><p><strong>Repeat a command</strong>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb37-1"><a href="#cb37-1"></a><span class="ex">!!</span>  <span class="co"># Repeat the last command</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1"></a><span class="ex">!!</span>  <span class="co"># Repeat the last command</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p><strong>Run a specific command from history</strong>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1"></a><span class="ex">!</span><span class="op">&lt;</span>number<span class="op">&gt;</span>  <span class="co"># Replace &lt;number&gt; with the history entry number</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb39-1"><a href="#cb39-1"></a><span class="ex">!</span><span class="op">&lt;</span>number<span class="op">&gt;</span>  <span class="co"># Replace &lt;number&gt; with the history entry number</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p><strong>Clear the command history</strong>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb39-1"><a href="#cb39-1"></a><span class="bu">history</span> <span class="at">-c</span> <span class="co"># bash</span></span>
-<span id="cb39-2"><a href="#cb39-2"></a><span class="bu">history</span> <span class="at">-p</span> <span class="co"># zsh</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb40"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb40-1"><a href="#cb40-1"></a><span class="bu">history</span> <span class="at">-c</span> <span class="co"># bash</span></span>
+<span id="cb40-2"><a href="#cb40-2"></a><span class="bu">history</span> <span class="at">-p</span> <span class="co"># zsh</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 </ul>
 </section>
 <section id="exercise-9" class="level2">
