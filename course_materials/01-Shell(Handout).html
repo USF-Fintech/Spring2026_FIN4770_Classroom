@@ -2273,6 +2273,7 @@ vertical-align: -.125em;
   <li><a href="#command-line-productivity" id="toc-command-line-productivity" class="nav-link" data-scroll-target="#command-line-productivity">Command-Line Productivity</a>
   <ul class="collapse">
   <li><a href="#history-and-shortcuts" id="toc-history-and-shortcuts" class="nav-link" data-scroll-target="#history-and-shortcuts">History and Shortcuts</a></li>
+  <li><a href="#history-expansion-with" id="toc-history-expansion-with" class="nav-link" data-scroll-target="#history-expansion-with">History expansion with <code>!</code></a></li>
   <li><a href="#exercise-9" id="toc-exercise-9" class="nav-link" data-scroll-target="#exercise-9">Exercise</a></li>
   <li><a href="#essential-shortcuts" id="toc-essential-shortcuts" class="nav-link" data-scroll-target="#essential-shortcuts">Essential Shortcuts</a></li>
   </ul></li>
@@ -2465,7 +2466,8 @@ vertical-align: -.125em;
 <h2 class="anchored" data-anchor-id="displaying-text-with-echo">Displaying Text with <code>echo</code></h2>
 <ul>
 <li><p><strong>Basic usage</strong>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1"></a><span class="bu">echo</span> <span class="st">&quot;Hello, Shell&quot;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1"></a><span class="co"># Escape exclaimation with backslash &quot;\&quot;</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="bu">echo</span> <span class="st">&quot;Hello, Shell\!&quot;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p><strong>Redirecting output to a new file</strong>:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1"></a><span class="bu">echo</span> <span class="st">&quot;This is a line of text&quot;</span> <span class="op">&gt;</span> file.txt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p><strong>Appending output to an (existing) file</strong>:</p>
@@ -2829,7 +2831,7 @@ lrwxrwxrwx  1 user group     20 Jan 25 10:45 link -&gt; /path/to/target</code></
 <li><p>Begin with a <strong>#!</strong> to specify the shell interpreter (bash):</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb28"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1"></a><span class="co">#!/bin/bash</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p>Add commands to the script:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1"></a><span class="bu">echo</span> <span class="st">&quot;Hello, Shell!&quot;</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb29"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1"></a><span class="bu">echo</span> <span class="st">&quot;Hello, Shell\!&quot;</span></span>
 <span id="cb29-2"><a href="#cb29-2"></a><span class="bu">echo</span> <span class="st">&quot;My current shell is </span><span class="va">$SHELL</span><span class="st">&quot;</span></span>
 <span id="cb29-3"><a href="#cb29-3"></a><span class="fu">date</span></span>
 <span id="cb29-4"><a href="#cb29-4"></a><span class="bu">pwd</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
@@ -2923,14 +2925,33 @@ lrwxrwxrwx  1 user group     20 Jan 25 10:45 link -&gt; /path/to/target</code></
 <ul>
 <li>Displays a list of previously executed commands.</li>
 </ul></li>
-<li><p><strong>Repeat a command</strong>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1"></a><span class="ex">!!</span>  <span class="co"># Repeat the last command</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
-<li><p><strong>Run a specific command from history</strong>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb39-1"><a href="#cb39-1"></a><span class="ex">!</span><span class="op">&lt;</span>number<span class="op">&gt;</span>  <span class="co"># Replace &lt;number&gt; with the history entry number</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 <li><p><strong>Clear the command history</strong>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb40"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb40-1"><a href="#cb40-1"></a><span class="bu">history</span> <span class="at">-c</span> <span class="co"># bash</span></span>
-<span id="cb40-2"><a href="#cb40-2"></a><span class="bu">history</span> <span class="at">-p</span> <span class="co"># zsh</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1"></a><span class="bu">history</span> <span class="at">-c</span> <span class="co"># bash</span></span>
+<span id="cb38-2"><a href="#cb38-2"></a><span class="bu">history</span> <span class="at">-p</span> <span class="co"># zsh</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
 </ul>
+</section>
+<section id="history-expansion-with" class="level2">
+<h2 class="anchored" data-anchor-id="history-expansion-with">History expansion with <code>!</code></h2>
+<p>Simple history expansions:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb39"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb39-1"><a href="#cb39-1"></a><span class="ex">!!</span>  <span class="co"># Repeat the last command</span></span>
+<span id="cb39-2"><a href="#cb39-2"></a><span class="ex">!-2</span> <span class="co"># Run 2 commands ago</span></span>
+<span id="cb39-3"><a href="#cb39-3"></a><span class="ex">!</span><span class="op">&lt;</span>number<span class="op">&gt;</span>  <span class="co"># Replace &lt;number&gt; with the history entry number</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Command based history expansions:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb40"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb40-1"><a href="#cb40-1"></a><span class="ex">!command</span> <span class="co"># Run last command starts with command </span></span>
+<span id="cb40-2"><a href="#cb40-2"></a><span class="co"># Example</span></span>
+<span id="cb40-3"><a href="#cb40-3"></a><span class="ex">!cd</span> <span class="co"># Run last command that stars with cd</span></span>
+<span id="cb40-4"><a href="#cb40-4"></a><span class="ex">!mkdir</span> <span class="co"># Run last command starts with mkdir</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<hr>
+<p>History expansion with previous arguments:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb41"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb41-1"><a href="#cb41-1"></a><span class="fu">cat</span> file1.txt file2.txt file3.txt</span>
+<span id="cb41-2"><a href="#cb41-2"></a><span class="ex">!$</span> <span class="co"># last argument: file3.txt</span></span>
+<span id="cb41-3"><a href="#cb41-3"></a><span class="ex">!^</span> <span class="co"># first argument: file1.txt</span></span>
+<span id="cb41-4"><a href="#cb41-4"></a><span class="ex">!*</span> <span class="co"># all ags: file1.txt file2.txt file3.txt</span></span>
+<span id="cb41-5"><a href="#cb41-5"></a><span class="ex">!:2</span> <span class="co"># second argument: file2.txt</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Example based on above command:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb42-1"><a href="#cb42-1"></a><span class="fu">rm</span> !<span class="pp">*</span> <span class="co"># rm file1.txt file2.txt file3.txt</span></span>
+<span id="cb42-2"><a href="#cb42-2"></a><span class="fu">nano</span> !^ <span class="co"># nano file1.txt</span></span>
+<span id="cb42-3"><a href="#cb42-3"></a><span class="bu">echo</span> <span class="st">&quot;This is the second argument: !:2&quot;</span> <span class="co"># Try!</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="exercise-9" class="level2">
 <h2 class="anchored" data-anchor-id="exercise-9">Exercise</h2>
@@ -2938,8 +2959,7 @@ lrwxrwxrwx  1 user group     20 Jan 25 10:45 link -&gt; /path/to/target</code></
 <li>View your command history and re-run the last three commands.</li>
 <li>Use <code>!!</code> to repeat the last command.</li>
 <li>Use <code>!&lt;number&gt;</code> to execute a specific command from the history list.</li>
-<li>Experiment with <code>Ctrl + r</code> and type keyword to find a previously used command.</li>
-<li>Clear your command history and verify it is empty with <code>history</code>.</li>
+<li>Run <code>echo f1 f2 f3</code>. How can you print (echo) second argument(f2) in the next command?</li>
 </ol>
 </section>
 <section id="essential-shortcuts" class="level2">
@@ -2958,15 +2978,6 @@ lrwxrwxrwx  1 user group     20 Jan 25 10:45 link -&gt; /path/to/target</code></
 <li><strong><code>Ctrl + U</code></strong>: Delete everything before the cursor</li>
 <li><strong><code>Ctrl + K</code></strong>: Delete everything after the cursor</li>
 <li><strong><code>Ctrl + W</code></strong>: Delete the word before the cursor</li>
-</ul>
-</section>
-<section id="command-history" class="level3">
-<h3 class="anchored" data-anchor-id="command-history">Command History</h3>
-<ul>
-<li><strong><code>Ctrl + R</code></strong>: Search your command history interactively
-<ul>
-<li>Press <code>Ctrl + R</code> repeatedly to cycle through matches</li>
-</ul></li>
 </ul>
 </section>
 <section id="miscellaneous" class="level3">
